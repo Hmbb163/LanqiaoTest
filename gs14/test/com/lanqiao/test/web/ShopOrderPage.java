@@ -11,6 +11,7 @@ public class ShopOrderPage {
     }
 
     //TODO 请实现获取商品标题的方法
+    //用xpth定位到商品标题
     
 
     

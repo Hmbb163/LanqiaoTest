@@ -25,7 +25,7 @@ public class ShopLoginPage {
         WebElement element_password = this.driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div[2]/div/div[2]/form/dl[2]/dd/input"));
         element_password.clear();
         element_password.sendKeys(password);
-        Thread.sleep(1000);
+        Thread.sleep(1000); 
     }
 
     //点击登录按钮的方法

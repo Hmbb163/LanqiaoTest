@@ -16,7 +16,7 @@ public class UserShopTest {
     static WebDriver driver = null;
 
     @Before
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         //TODO ÇëÌîĞ´chromedriver.exeµÄÂ·¾¶
         System.setProperty("webdriver.chrome.driver","");
         ChromeOptions options = new ChromeOptions();
@@ -29,17 +29,19 @@ public class UserShopTest {
         driver.manage().window().maximize();
         
         //TODO ÇëÌîĞ´±»²âÕ¾µãµØÖ·
-        driver.get("");
-
+        driver.get("http://192.168.40.10");
+        Thread.sleep(1000);
     }
 
     @After
     public void tearDown() {
         //TODO ÇëÌîĞ´ä¯ÀÀÆ÷ÍË³ö
+    	
     }
 
     @Test
     public void testShop() throws InterruptedException {
         //TODO ÇëÌîĞ´²âÊÔÓÃÀı
+    	
     }
 }

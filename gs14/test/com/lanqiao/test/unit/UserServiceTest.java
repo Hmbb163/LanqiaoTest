@@ -44,9 +44,12 @@ public class UserServiceTest {
    @Test
     public void test2UpdatePassword(){
     	// TODO: 请填写updatePassword方法的单元测试代码
+	   //先登录
 	   pUserService.login("user1", "password1");
 	   
-	   Assert.assertNull(pUserService.updatePassword("none", "password12"));
+	   //该用户不存在--返回空
+	   Assert.assertNull(pUserService.updatePassword("none", "password1"));
+	   
 	   Assert.assertEquals("password12",pUserService.updatePassword("user1", "password12").getPassword() );
     }
    
@@ -58,6 +61,7 @@ public class UserServiceTest {
 	   pUserService.updatePassword(null, "password11");
 //	   Assert.assertEquals("参数错误", pUserService.updatePassword("user1", null));
 	   pUserService.updatePassword("user1", null);
+	   pUserService.updatePassword(null, null);
 //	   Assert.assertEquals("参数错误", pUserService.updatePassword("user2", "password22"));
 	   pUserService.updatePassword("user2", "password22");
    }
