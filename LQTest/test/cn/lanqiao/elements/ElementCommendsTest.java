@@ -3,7 +3,6 @@ package cn.lanqiao.elements;
 import java.util.List;
 
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -14,8 +13,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-
-import net.bytebuddy.dynamic.scaffold.MethodRegistry.Handler.ForImplementation;
 
 public class ElementCommendsTest {
 
@@ -103,7 +100,7 @@ public class ElementCommendsTest {
 	 
 //	 select选择单选框
 	 @Test
-	 @Ignore
+//	 @Ignore
 	    public void testSelectEle() throws Exception{
 	        // 设置 WebDriver 的路径
 	        System.setProperty("webdriver.gecko.driver", "C:\\driver\\geckodriver.exe");
@@ -212,7 +209,7 @@ public class ElementCommendsTest {
 	 
 //	 select多选框操作
 	 @Test
-	 @Ignore
+//	 @Ignore
 	 public void test2() throws InterruptedException {
 		 //连接网址
 		 String url = "http://sahitest.com/demo/selectTest.htm";

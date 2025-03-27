@@ -1,7 +1,5 @@
 package cn.lanqiao.js;
 
-import java.time.Duration;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -14,10 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 //import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.sun.java.swing.plaf.windows.resources.windows;
-
-import jdk.nashorn.internal.scripts.JS;
-
 public class ExecuteJSCommandTest {
 
 	public static WebDriver driver;
@@ -25,10 +19,10 @@ public class ExecuteJSCommandTest {
 	public static void setMain() {
 		System.getProperty("webdriver.gecko.driver","C:\\driver\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().window().setSize(new Dimension(900, 100));
+		driver.manage().window().setSize(new Dimension(900, 500));
 //		driver.manage().window().setPosition(new Point(0, 0));
 //		driver.manage().window().maximize();
-//        driver.get("https://www.lanqiao.cn");
+        driver.get("https://www.lanqiao.cn");
 
 	}
 	
@@ -36,7 +30,6 @@ public class ExecuteJSCommandTest {
 	@Test
 	@Ignore
 	public void test1() {
-
         // 将 driver 转换为 JavascriptExecutor 用来执行 js 代码
         JavascriptExecutor js = (JavascriptExecutor) driver;//universal-header-search-input
         String jsCode = "document.getElementsByClassName(\"universal-header-search-input\")[0].value=\"Selenium\"";
@@ -61,7 +54,7 @@ public class ExecuteJSCommandTest {
 	
 	//滑动相对高度
 	@Test
-//	@Ignore
+	@Ignore
 	public void test3() throws InterruptedException {
 		//将driver赋值给Js
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
@@ -78,7 +71,7 @@ public class ExecuteJSCommandTest {
 	
 	//一直滑动来找元素
 	@Test
-//	@Ignore
+	@Ignore
 	public void test4() {
 		driver.get("https://jqueryui.com/selectable/");
 		  //driver-->js 
@@ -104,18 +97,21 @@ public class ExecuteJSCommandTest {
 	}
 	
 	//获取域名
-	@Test@Ignore
+	@Test
+	@Ignore
 	public void testGetDomain() {
 		//将driver转化为js
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		//将执行结果的域名返回成字符串
 		String dominString = (String) js.executeScript("return document.domain");
-		System.out.println(dominString);
+		System.out.println(dominString);//www.lanqiao.cn
+		System.out.println(driver.getCurrentUrl());//https://www.lanqiao.cn/
 		
 	}
 	
 	//改变字体的颜色属性
-    @Test@Ignore
+    @Test
+    @Ignore
     public void testChangeColor() throws Exception{
         JavascriptExecutor js = (JavascriptExecutor) driver;
         // 滑动到右边

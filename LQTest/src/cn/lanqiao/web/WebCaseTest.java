@@ -47,7 +47,7 @@ public class WebCaseTest {
 		driver.manage().window().maximize();
 
 		//填写被测站点地址
-		driver.get("https://66174373c078967d2a7ef506.hz-iframe-svc.simplelab.cn/login");
+		driver.get("https://66557ebc14120c26398373a3.hz-iframe-svc.simplelab.cn/login");
 
 	}
  
@@ -71,7 +71,7 @@ public class WebCaseTest {
 		loginPage.clickLoginButton();
 		
 		//一般对于页面跳转类需要加等待时间
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		
 	
 		// 创建PostManagementPage对象

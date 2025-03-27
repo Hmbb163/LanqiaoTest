@@ -3,8 +3,10 @@ package com.lanqiao.Demo;
 import org.junit.Ignore;
 import org.junit.Test;
 
-//@FixMethodOrder(MethodSorters.DEFAULT)
+//这里报错，是因为适用于Junit5，而考试用的是Junit4
 //@FixMethodOrder(MethodSorters.JVM)
+//@FixMethodOrder(MethodSorters.DEFAULT)
+
 
 public class OrderTestTest {
 

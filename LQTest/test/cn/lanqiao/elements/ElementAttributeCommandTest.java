@@ -35,7 +35,8 @@ public class ElementAttributeCommandTest {
 	
 	
 //	--验证Is xxx 方法 是否正确
-	 @Test@Ignore
+	 @Test
+//	 @Ignore
 	    public void testIs() throws Exception{
 	        // 设置 WebDriver 的路径
 		 System.setProperty("webdriver.gecko.driver","C:\\driver\\geckodriver.exe");	      

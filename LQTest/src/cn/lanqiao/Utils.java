@@ -13,6 +13,7 @@ public class Utils {
      * @param min 最小长度
      * @param max 最大长度
      * @return 处理后的信息
+//     * @throws InterruptedException 
      */
     public static String stringStyle(String message, int min, int max){
         String result = null;

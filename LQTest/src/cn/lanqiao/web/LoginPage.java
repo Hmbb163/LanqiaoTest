@@ -25,7 +25,7 @@ public class LoginPage {
     // 输入【用户名称】的操作代码
     public void inputLoginName(String loginName){
     	
-        //清空用户名输入框内容，防止脏数据
+        //清空用户名输入框内容，防止脏数据/html/body/div/div[1]/div[2]/form/input[1]
         driver.findElement(By.xpath("//*[@id=\"signupForm\"]/input[1]")).clear();
         //输入传入的userName参数
         driver.findElement(By.xpath("//*[@id=\"signupForm\"]/input[1]")).sendKeys(loginName);

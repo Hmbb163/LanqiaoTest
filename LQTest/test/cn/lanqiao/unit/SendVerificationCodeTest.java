@@ -48,19 +48,19 @@ public class SendVerificationCodeTest {
 	@Test
 	public void testIsValid03() {
 		// TODO: 请填写 isValid 方法的单元测试代码
-		Assert.assertFalse(sendCode.isValid("123456"));
+		Assert.assertFalse(sendCode.isValid("123456789abc"));
 	}
 	
 	@Test
 	public void testIsValid04() {
 		// TODO: 请填写 isValid 方法的单元测试代码
-		Assert.assertTrue(sendCode.isValid("17851935085"));
+		Assert.assertTrue(sendCode.isValid("17851935085"));//true
 	}
 	
 	@Test
 	public void testIsValid05() {
 		// TODO: 请填写 isValid 方法的单元测试代码
-		Assert.assertFalse(sendCode.isValid("189ajs2389a"));
+		Assert.assertFalse(sendCode.isValid("123456789ab"));
 	}
 
 }

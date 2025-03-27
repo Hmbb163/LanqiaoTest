@@ -35,9 +35,9 @@ public class ExplicitWaitCommand {
 
         try {
             System.out.println(System.currentTimeMillis());
-            WebElement ele = new WebDriverWait(driver, Duration.ofSeconds(3))
+            WebElement ele = new WebDriverWait(driver, Duration.ofSeconds(1))
             		.until(driver1 -> driver1.findElement(By.id("kkk")));
-            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(3)).until(driver1 -> driver1.findElement(By.id("123")));
+//            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(3)).until(driver1 -> driver1.findElement(By.id("123")));
 //            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(3)).until(driver1 -> driver1.findElement(By.id("123")));
             
         } catch (Exception e){
@@ -49,7 +49,8 @@ public class ExplicitWaitCommand {
 	}
 	
 	
-	@AfterClass@Ignore
+	@AfterClass
+	@Ignore
 	public static void endMain() throws InterruptedException {
 //		Thread.sleep(3000);
 		driver.quit();

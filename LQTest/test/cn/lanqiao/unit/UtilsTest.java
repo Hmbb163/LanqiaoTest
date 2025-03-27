@@ -3,17 +3,22 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runners.*;
 
 import cn.lanqiao.Utils;
+
 
 /**
  * 1. 请使用简单循环覆盖法对被测源代码 Utils 类中的 stringStyle 方法设计 6 条单元测试用例。
  * 2. 请在下方 UtilsTest 类中填写单元测试代码内容。
  * 3. 在测试中用到的断言 Assert 类务必使用 org.junit 包中的 Assert 。
  */
+//@FixMethodOrder(MethodSorter.DEFAULT)
 public class UtilsTest {
 
+	
 //    @Test
 //    public void testStringStyle01(){
 //        // TODO 请填写单元测试代码
@@ -50,54 +55,52 @@ public class UtilsTest {
 //        Assert.assertEquals("字符串不能为空", Utils.stringStyle(null, 3, 12));//.
 //    }
 	
+//	Timeout do = 
 	//0
     @Test
-    public void testStringStyle02(){
-
-        assertEquals("123456789ABC",Utils.stringStyle("123456789ABC", 3, 12));
+    public void testStringStyle02() {
+        assertEquals("1234567",Utils.stringStyle("1234567", 1, 7));
         
     }
     //1
     @Test
+   // @Ignore
     public void testStringStyle03(){
-        assertEquals("123456789AB ",Utils.stringStyle("123456789AB", 3, 12));
+    	assertEquals("1234567 ",Utils.stringStyle("1234567", 1, 8));
         
     }
     //2
     @Test
     public void testStringStyle04(){
        
-        assertEquals("123456789A  ",Utils.stringStyle("123456789A", 3, 12));
+    	assertEquals("1234567  ",Utils.stringStyle("1234567", 1, 9));
     }
 
-    //5
+    //3
     @Test
     public void testStringStyle04_(){
        
-        assertEquals("1234567     ",Utils.stringStyle("1234567", 3, 12));
+    	assertEquals("1234567   ",Utils.stringStyle("1234567", 1, 10));
     }
 
     
-    //8
+    //
     @Test
     public void testStringStyle05(){
-        assertEquals("1234        ",Utils.stringStyle("1234", 3, 12));
-        
-        
+    	assertEquals("字符串长度必须在1~7位",Utils.stringStyle("", 1, 7));    
     }
-    //9
+    //
     @Test
     public void testStringStyle06(){
-        assertEquals("123         ",Utils.stringStyle("123", 3, 12));
-        
-        
+    	assertEquals("字符串不能为空",Utils.stringStyle(null, 1, 7)); 
     }
+    
      //10
      @Test
      public void testStringStyle07(){
-    	 assertEquals("字符串长度必须在3~12位",Utils.stringStyle("12", 3, 12));
+    	 assertEquals("字符串长度必须在1~7位",Utils.stringStyle("12345678", 1 , 7));
      }
-     public void test() {
-    	 assertEquals("字符串长度必须在3~12位",Utils.stringStyle("12", 3, 12));
-     }
+//     public void test() {
+//    	 assertEquals("字符串长度必须在1~12位",Utils.stringStyle("12", 1 , 7));
+//     }
 }
